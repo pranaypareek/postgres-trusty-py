@@ -8,9 +8,8 @@ sudo apt-get --yes install postgresql-client
 service postgresql status
 service postgresql start
 
-su - postgres 
-psql -U postgres -d postgres --command "create database prod;"
-psql -U postgres -d postgres --command "alter user postgres with password 'foobar';"
+sudo -i -u postgres psql --echo-all -U postgres -d postgres --command "create database prod;"
+sudo -i -u postgres psql --echo-all -U postgres -d postgres --command "alter user postgres with password 'foobar';"
 
 # restart postgresql service for changes to take effect
 sudo service postgresql restart
