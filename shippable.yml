@@ -3,4 +3,6 @@ build_image: shippableimages/ubuntu1404_python
 python: "3.4"
 
 install:
+ - pwd
  - ./install.sh
+ - pwd
